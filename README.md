@@ -4,23 +4,28 @@
 * HuggingFace.py
   - Modelo já treinado para a tarefa de classificação de sentimentos IMDB (Positivo/Negativo)
 
-[[11801   699]
- [ 1044 11456]]
-              precision    recall  f1-score   support
+|            | Previsto Positivo | Previsto Negativo |
+|------------|-------------------|-------------------|
+| Real Positivo | 11.801               | 699                 |
+| Real Negativo | 1.044               | 11.456               |
 
-           0       0.92      0.94      0.93     12500
-           1       0.94      0.92      0.93     12500
 
-    accuracy                           0.93     25000
-   macro avg       0.93      0.93      0.93     25000
-weighted avg       0.93      0.93      0.93     25000
+| Classe | Precisão | Recall | F1-Score | Suporte |
+|--------|----------|--------|----------|---------|
+| 0 (Negativo) | 0.92     | 0.94   | 0.93     | 12.500  |
+| 1 (Positivo) | 0.94     | 0.92   | 0.93     | 12.500  |
 
+
+| Métrica           | Valor |
+|-------------------|-------|
+| Acurácia          | 0.93  |
 
 ## BERT
 * bert.py
   - Script usa um modelo previamente treinado para extrair os embeddings
   - De posso dos embedding, qualquer classificador pode ser treinando para
     classificar os comentários (positivo/negativo)
+  - o script rf.py treina um Random Forest para essa tarefa
 
 ## LLM (Prompt)
 * Instale o ollama:
